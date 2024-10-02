@@ -2,8 +2,14 @@
 //    The function should return the number of vowels (a, e, i, o, u) in the string.
 //    Use TypeScript types to ensure the parameter and return type are properly typed.
 
-function countVowels(word) {
-
+function countVowels(word: string): number {
+  let counter: number = 0
+  word.split('').forEach(letter => {
+    if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
+      counter++
+    }
+  })
+  return counter
 }
 
 // Expected output:
